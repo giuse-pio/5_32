@@ -37,15 +37,15 @@ int main(void) {
         SommaVoti += voti[i];
         MediaVoti = SommaVoti / n;
 
-        if (voti[i] == 6) {
+        if (MediaVoti == 6) {
             crediti = (rand() % 2) + 7; // Genera casualmente i crediti tra 7 e 8
-        } else if (voti[i] > 6 && voti[i] <= 7) {
+        } else if (MediaVoti > 6 && MediaVoti <= 7) {
             crediti = (rand() % 2) + 8; // Genera casualmente i crediti tra 8 e 9
-        } else if (voti[i] > 7 && voti[i] <= 8) {
+        } else if (MediaVoti > 7 && MediaVoti <= 8) {
             crediti = (rand() % 2) + 9; // Genera casualmente i crediti tra 9 e 10
-        } else if (voti[i] > 8 && voti[i] <= 9) {
+        } else if (MediaVoti > 8 && MediaVoti <= 9) {
             crediti = (rand() % 2) + 10; // Genera casualmente i crediti tra 10 e 11
-        } else if (voti[i] > 9 && voti[i] <= 10) {
+        } else if (MediaVoti > 9 && MediaVoti <= 10) {
             crediti = (rand() % 2) + 11; // Genera casualmente i crediti tra 11 e 12
         } else {
             crediti = 0;
@@ -64,7 +64,7 @@ int main(void) {
 
         for (int j = 0; j < n - i; j++) {
             if (voti[j] > voti[j + 1]) {
-                int temp = 0;
+                float temp = 0;
                 temp = voti[j];
                 voti[j] = voti[j + 1];
                 voti[j + 1] = temp;
